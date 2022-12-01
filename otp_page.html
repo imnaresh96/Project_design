@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+            <!-- THEME CONFIGURATION -->
+            <script>
+                let themeAttrs = document.documentElement.dataset;
+            
+                for(let attr in themeAttrs) {
+                    if(localStorage.getItem(attr) != null) {
+                        document.documentElement.dataset[attr] = localStorage.getItem(attr);
+            
+                        if (theme === 'auto') {
+                            document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            
+                            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                                e.matches ? document.documentElement.dataset.theme = 'dark' : document.documentElement.dataset.theme = 'light';
+                            });
+                        }
+                    }
+                }
+            </script>
+        <!-- MAIN CONTENT -->
+        <main class="container">
+            <div class="row align-items-center justify-content-around vh-100">
+                <div class="col-lg-10">
+                    <div class="row align-items-center justify-content-between py-6">
+                        <div class="col-lg-5 order-lg-last">
+        
+                            <!-- Image -->
+                            <div class="text-center">
+                               <img src="https://d33wubrfki0l68.cloudfront.net/082e03067ebbbc6d71901f4d30ebfd26d9ef3486/913bc/assets/images/illustrations/2-step-verification-illustration.svg" alt="..." class="img-fluid">
+                            </div>
+                       </div>
+        
+                        <div class="col-lg-6 py-6">
+        
+                            <!-- Title -->
+                            <h1 class="mb-2">2-step verification</h1>
+
+                            <!-- Heading -->
+                            <p class="text-secondary">We sent a verification code to your email. <br class="d-none d-lg-block">Enter the code from the email in the field below</p>
+        
+                            <!-- Form -->
+                            <form>
+
+                                <!-- Inputs -->
+                                <div class="row mx-n3">
+                                    <div class="col-auto px-3">
+                                        <div class="mb-6">
+                                            <input type="text" class="form-control form-control-single-number w-80px h-80px" data-inputmask="'mask': '9', 'jitMasking': true" autofocus maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto px-3">
+                                        <div class="mb-6">
+                                            <input type="text" class="form-control form-control-single-number w-80px h-80px" data-inputmask="'mask': '9', 'jitMasking': true" maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto px-3">
+                                        <div class="mb-6">
+                                            <input type="text" class="form-control form-control-single-number w-80px h-80px" data-inputmask="'mask': '9', 'jitMasking': true" maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto px-3">
+                                        <div class="mb-6">
+                                            <input type="text" class="form-control form-control-single-number w-80px h-80px" data-inputmask="'mask': '9', 'jitMasking': true" maxlength="1" autocomplete="off" autocapitalize="off" spellcheck="false">
+                                        </div>
+                                    </div>
+                                </div> <!-- / .row -->
+
+                                <div class="row align-items-center justify-content-md-between text-center text-md-start">
+                                    <div class="col-md-auto">
+        
+                                        <!-- Button -->
+                                        <button type="button" class="btn btn-primary mt-3 mb-1">Verify my account</button>
+                                    </div>
+                                    
+                                    <div class="col-md-auto">
+        
+                                        <!-- Link -->
+                                        <small class="mb-0 text-muted">Haven't received it? <a href="javascript: void(0);" class="fw-semibold">Resend a new code</a></small>
+                                    </div>
+                                </div> <!-- / .row -->
+                            </form>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div> <!-- / .row -->
+        </main> <!-- / main -->
+
+        <!-- JAVASCRIPT-->
+        <!-- Theme JS -->
+  {% endblock %}     

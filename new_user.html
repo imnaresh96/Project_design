@@ -7,10 +7,10 @@
 
         <div class="header-left">
             <a href="index-2.html" class="logo">
-                <img src="/static/assets/img/logo.png" alt="Logo">
+                <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
             </a>
             <a href="index-2.html" class="logo logo-small">
-                <img src="/static/assets/img/logo-small.png" alt="Logo" width="30" height="30">
+                <img src="{% static 'assets/img/logo-small.png' %}" alt="Logo" width="30" height="30">
             </a>
         </div>
 
@@ -36,13 +36,15 @@
         <ul class="nav user-menu">
             <li class="nav-item dropdown noti-dropdown language-drop me-2">
                 <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
-                    <img src="/static/assets/img/icons/header-icon-01.svg" alt="">
+                    <img src="{% static 'assets/img/icons/header-icon-01.svg' %}" alt="">
                 </a>
                 <div class="dropdown-menu ">
                     <div class="noti-content">
                         <div>
-                            <a class="dropdown-item" href="javascript:;"><i class="flag flag-lr me-2"></i>English</a>
-                            <a class="dropdown-item" href="javascript:;"><i class="flag flag-bl me-2"></i>Francais</a>
+                            <a class="dropdown-item" href="javascript:;"><i
+                                    class="flag flag-lr me-2"></i>English</a>
+                            <a class="dropdown-item" href="javascript:;"><i
+                                    class="flag flag-bl me-2"></i>Francais</a>
                             <a class="dropdown-item" href="javascript:;"><i class="flag flag-cn me-2"></i>Turkce</a>
                         </div>
                     </div>
@@ -51,7 +53,7 @@
 
             <li class="nav-item dropdown noti-dropdown me-2">
                 <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
-                    <img src="/static/assets/img/icons/header-icon-05.svg" alt="">
+                    <img src="{% static 'assets/img/icons/header-icon-05.svg' %}" alt="">
                 </a>
                 <div class="dropdown-menu notifications">
                     <div class="topnav-dropdown-header">
@@ -64,7 +66,8 @@
                                 <a href="#">
                                     <div class="media d-flex">
                                         <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="/static/assets/img/profiles/avatar-02.jpg">
+                                            <img class="avatar-img rounded-circle" alt="User Image"
+                                                src="{% static 'assets/img/profiles/avatar-02.jpg' %}">
                                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Carlson Tech</span> has
@@ -79,11 +82,13 @@
                                 <a href="#">
                                     <div class="media d-flex">
                                         <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="/static/assets/img/profiles/avatar-11.jpg">
+                                            <img class="avatar-img rounded-circle" alt="User Image"
+                                                src="{% static 'assets/img/profiles/avatar-11.jpg' %}">
                                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">International Software
-                                                    Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
+                                                    Inc</span> has sent you a invoice in the amount of <span
+                                                    class="noti-title">$218</span></p>
                                             <p class="noti-time"><span class="notification-time">6 mins ago</span>
                                             </p>
                                         </div>
@@ -94,7 +99,8 @@
                                 <a href="#">
                                     <div class="media d-flex">
                                         <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="/static/assets/img/profiles/avatar-17.jpg">
+                                            <img class="avatar-img rounded-circle" alt="User Image"
+                                                src="{% static 'assets/img/profiles/avatar-17.jpg' %}">
                                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">John Hendry</span> sent
@@ -110,7 +116,8 @@
                                 <a href="#">
                                     <div class="media d-flex">
                                         <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="/static/assets/img/profiles/avatar-13.jpg">
+                                            <img class="avatar-img rounded-circle" alt="User Image"
+                                                src="{% static 'assets/img/profiles/avatar-13.jpg' %}">
                                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Mercury Software
@@ -132,37 +139,43 @@
 
             <li class="nav-item zoom-screen me-2">
                 <a href="#" class="nav-link header-nav-list win-maximize">
-                    <img src="/static/assets/img/icons/header-icon-04.svg" alt="">
+                    <img src="{% static 'assets/img/icons/header-icon-04.svg' %}" alt="">
                 </a>
             </li>
 
             <li class="nav-item dropdown has-arrow new-user-menus">
                 <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                     <span class="user-img">
-                        <!-- <img class="rounded-circle" src="/static/assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"> -->
+                        <img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-01.jpg' %}" width="31"
+                            alt="Ryan Taylor">
                         <div class="user-text">
-                            <h6>{{user_data.Full_Name}}</h6>
-                            <p class="text-muted mb-0">student</p>
+                            <h6>Ryan Taylor</h6>
+                            <p class="text-muted mb-0">Administrator</p>
                         </div>
                     </span>
                 </a>
                 <div class="dropdown-menu">
                     <div class="user-header">
-                        
+                        <div class="avatar avatar-sm">
+                            <img src="{% static 'assets/img/profiles/avatar-01.jpg' %}" alt="User Image"
+                                class="avatar-img rounded-circle">
+                        </div>
                         <div class="user-text">
-                            <h6>{{user_data.Full_Name}}</h6>
-                            <p class="text-muted mb-0"></p>
+                            <h6>Ryan Taylor</h6>
+                            <p class="text-muted mb-0">Administrator</p>
                         </div>
                     </div>
                     <a class="dropdown-item" href="profile.html">My Profile</a>
                     <a class="dropdown-item" href="inbox.html">Inbox</a>
-                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
                 </div>
             </li>
 
         </ul>
 
     </div>
+
+
     <div class="sidebar" id="sidebar">
         <div class="sidebar-inner slimscroll">
             <div id="sidebar-menu" class="sidebar-menu">
@@ -253,166 +266,108 @@
         </div>
     </div>
 
-<div class="page-wrapper mt-0">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-<div class="card bg-white">
-    <div class="card-header">
-        <h5 class="card-title">@{{user_data.first_name}} {{user_data.last_name}}'s Account</h5>
-    </div>
-    <div class="card-body">
-        <ul class="nav nav-tabs nav-justified">
-            <li class="nav-item"><a class="nav-link active" href="#basic-justified-tab1" data-bs-toggle="tab">Profile</a></li>
-            <li class="nav-item"><a class="nav-link" href="#basic-justified-tab2"
-                    data-bs-toggle="tab">Security</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="basic-justified-tab1">
-                <form action="{% url 'profile_update' %}" method="post">
-                    {% csrf_token %}
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- <h5 class="form-title"><span>@{{user_data.Address}}'s Account</span></h5> -->
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>First Name <span
-                                        class="login-danger">*</span></label>
-                                <input type="text" name='first_name'
-                                    class="form-control" placeholder="First Name"
-                                    value="{{user_data.first_name}}" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>Last Name <span
-                                        class="login-danger">*</span></label>
-                                <input type="text" name="last_name"
-                                    class="form-control" placeholder="Last Name"
-                                    value="{{user_data.last_name}}" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>Roll Number <span
-                                        class="login-danger">*</span></label>
-                                <input type="text" class="form-control"
-                                    name="roll_number" placeholder="Roll Number"
-                                    value="{{roll_user.roll_number}}" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>Date Of Birth <span
-                                        class="login-danger">*</span></label>
-                                <input class="form-control " name='dateofbirth'
-                                    type="date" value="{{user_data.DateOfBirth}}"
-                                    placeholder="YYYY-MM-DD" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>Date Of Joining <span
-                                        class="login-danger">*</span></label>
-                                <input type="date" class="form-control"
-                                    name='dateofjoining'
-                                    value="{{user_data.DateOfJoining}}"
-                                    placeholder="YYYY-MM-DD" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>Address <span
-                                        class="login-danger">*</span></label>
-                                <input type="text" class="form-control"
-                                    name="address" placeholder="Address"
-                                    value="{{user_data.Address}}" required>
-                            </div>
-                        </div>
+    <div class="page-wrapper mt-0">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-table comman-shadow">
                         <div class="card-body">
-                            <div class="popover-list">
-                                <button type="submit" class="btn btn-primary"
-                                    data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="">
-                                    Submit
-                                </button>
-                                <a href="{% url 'logout' %}">
-                                    <button type="button" class="btn btn-primary"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-trigger="click" data-bs-html="true"
-                                        data-bs-placement="bottom" title=""
-                                        aria-describedby="tooltip98582">
-                                        logout
-                                    </button></a>
-                                <a href="{% url 'delete_account' %}">
-                                    <button type="button" class="btn btn-primary"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-trigger="click" data-bs-html="true"
-                                        data-bs-placement="bottom" title=""
-                                        aria-describedby="tooltip98582">
-                                        Delete Account
-                                    </button></a>
+                            <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+                                <li class="nav-item"><a class="nav-link active" href="#bottom-justified-tab1"
+                                        data-bs-toggle="tab">Profile</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#bottom-justified-tab2"
+                                        data-bs-toggle="tab">Security</a>
+                                </li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#bottom-justified-tab3" data-bs-toggle="tab">Setting</a></li> -->
+                            </ul>
+                            <div class="tab-content">
+
+                                <div class="tab-pane active" id="bottom-justified-tab1">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h3 class="page-title">Fill Your Data</h3>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <form action="{% url 'new_user_update' %}" method="post">
+                                                        {% csrf_token %}
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <!-- <h5 class="form-title"><span>@{{user_data.Address}}'s Account</span></h5> -->
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <div class="form-group local-forms">
+                                                                    <label>First Name <span
+                                                                            class="login-danger">*</span></label>
+                                                                    <input type="text" name='first_name'
+                                                                        class="form-control" placeholder="First Name"
+                                                                        value="" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <div class="form-group local-forms">
+                                                                    <label>Last Name <span
+                                                                            class="login-danger">*</span></label>
+                                                                    <input type="text" name="last_name"
+                                                                        class="form-control" placeholder="Last Name"
+                                                                        value="" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <div class="form-group local-forms">
+                                                                    <label>Date Of Birth <span
+                                                                            class="login-danger">*</span></label>
+                                                                    <input class="form-control " name='dateofbirth'
+                                                                        type="date" value=""
+                                                                        placeholder="YYYY-MM-DD" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <div class="form-group local-forms">
+                                                                    <label>Date Of Joining <span
+                                                                            class="login-danger">*</span></label>
+                                                                    <input type="date" class="form-control"
+                                                                        name='dateofjoining'
+                                                                        value=""
+                                                                        placeholder="YYYY-MM-DD" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <div class="form-group local-forms">
+                                                                    <label>Address <span
+                                                                            class="login-danger">*</span></label>
+                                                                    <input type="text" class="form-control"
+                                                                        name="address" placeholder="Address"
+                                                                        value="" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="popover-list">
+                                                                    <button type="submit" class="btn btn-primary"
+                                                                        data-bs-toggle="tooltip" data-bs-html="true"
+                                                                        title="">
+                                                                        Submit
+                                                                    </button>
+                                                                    <a href="{% url 'logout' %}">
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-trigger="click" data-bs-html="true"
+                                                                            data-bs-placement="bottom" title=""
+                                                                            aria-describedby="tooltip98582">
+                                                                            logout
+                                                                        </button></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="tab-pane" id="basic-justified-tab2">
-                <form action="{% url 'password_reset' %}" method="post">
-                    {% csrf_token %}
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- <h5 class="form-title"><span>@{{user_data.Address}}'s Account</span></h5> -->
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>Current Password <span
-                                        class="login-danger">*</span></label>
-                                <input type="password" name='current_password'
-                                    class="form-control"
-                                    placeholder="current_password" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>New Password <span
-                                        class="login-danger">*</span></label>
-                                <input type="password" name='new_password'
-                                    class="form-control" placeholder="new_password"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <div class="form-group local-forms">
-                                <label>Confirm Password <span
-                                        class="login-danger">*</span></label>
-                                <input type="password" name='confirm_password'
-                                    class="form-control"
-                                    placeholder="confirm_password" required>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="popover-list">
-                                <button type="submit" class="btn btn-primary"
-                                    data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="">
-                                    Submit
-                                </button>
-                                <a href="{% url 'logout' %}">
-                                    <button type="button" class="btn btn-primary"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-trigger="click" data-bs-html="true"
-                                        data-bs-placement="bottom" title=""
-                                        aria-describedby="tooltip98582">
-                                        logout
-                                    </button></a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %}
+
+                    {% endblock %}
